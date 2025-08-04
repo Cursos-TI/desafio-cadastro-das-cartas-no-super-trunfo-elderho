@@ -20,7 +20,7 @@ int main() {
 
 //variáveis para Carta 1 (c1)
     char estadoc1;
-    char codigoc1[3];
+    char codigoc1[5]; //como sugerido, aumentado o tamanho do array de 3 para 5
     char cidadec1[50];
     int populacaoc1;
     float areac1;
@@ -29,7 +29,7 @@ int main() {
 
 //variáveis para Carta 2 (c2)
     char estadoc2;
-    char codigoc2[3];
+    char codigoc2[5]; //como sugerido, aumentado o tamanho do array de 3 para 5
     char cidadec2[50];
     int populacaoc2;
     float areac2;
@@ -43,10 +43,10 @@ int main() {
     scanf(" %c", &estadoc1);
 
     printf("Digite o código para a Carta (ex: A01,B03): \n");
-    scanf(" %s", codigoc1);
+    scanf(" %4s", codigoc1); //como sugerido, limitado a leitura a 4 caracteres + \0
 
     printf("Digite o nome da cidade: \n");
-    scanf(" %s", cidadec1);
+    scanf(" %49[^\n]", cidadec1); //como sugerido, foi usado o especificador de conjunto de varredura para evitar o buffer overflow
 
     printf("Digite a população: \n");
     scanf(" %d", &populacaoc1);
@@ -68,10 +68,10 @@ int main() {
     scanf(" %c", &estadoc2);
 
     printf("Digite o código para a Carta (ex: A01,B03): \n");
-    scanf(" %s", codigoc2);
+    scanf(" %4s", codigoc2); //como sugerido, limitado a leitura a 4 caracteres + \0
 
     printf("Digite o nome da cidade: \n");
-    scanf(" %s", cidadec2);
+    scanf(" %49[^\n]", cidadec2); //como sugerido, foi usado o especificador de conjunto de varredura para evitar o buffer overflow
 
     printf("Digite a população: \n");
     scanf(" %d", &populacaoc2);
