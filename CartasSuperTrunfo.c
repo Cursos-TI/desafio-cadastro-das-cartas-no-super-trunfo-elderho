@@ -26,6 +26,8 @@ int main() {
     float areac1;
     float pibc1;
     int pontosturc1;
+    float densidadepopc1;    // Variável nova do nível 2 para densidade populacional
+    float pibpercapitac1; // Variável nova do nível 2 para PIB per capita
 
 //variáveis para Carta 2 (c2)
     char estadoc2;
@@ -35,6 +37,9 @@ int main() {
     float areac2;
     float pibc2;
     int pontosturc2;
+    float densidadepopc2;    // Variável nova do nível 2 para densidade populacional
+    float pibpercapitac2; // Variável nova do nível 2 para PIB per capita
+
 
 //solicitando os dados da Carta 1 (c1):
     printf("Cadastre os dados da Carta 1:\n");
@@ -60,7 +65,12 @@ int main() {
     printf("Digite o número de pontos turísticos da cidade: \n");
     scanf(" %d", &pontosturc1);
 
+// Cálculos do nível 2 para carta 1 (c1)
+    densidadepopc1 = populacaoc1 / areac1; // Cálculo da Densidade Populacional da Carta 1 (c1)
+    pibpercapitac1 = (pibc1 * 1000000000) / populacaoc1; // Cálculo do PIB Per Capita da Carta 1 (c1)
+
     printf("#####################################\n");
+    
 //solicitando os dados da Carta 2 (c2):
     printf("Cadastre os dados da Carta 2:\n");
 
@@ -85,7 +95,12 @@ int main() {
     printf("Digite o número de pontos turísticos da cidade: \n");
     scanf("  %d", &pontosturc2);
 
+// Cálculos do nível 2 para carta 2 (c2)
+    densidadepopc2 = populacaoc2 / areac2; // Cálculo da Densidade Populacional da Carta 2 (c2)
+    pibpercapitac2 = (pibc2 * 1000000000) / populacaoc2; // Cálculo do PIB Per Capita da Carta 2 (c2)
+
     printf("#####################################\n");
+    
 //exibindo os dados da Carta 1 (c1)
     printf("\nCarta 1:\n");
     printf("Estado: %c\n", estadoc1);
@@ -95,8 +110,11 @@ int main() {
     printf("Área: %.2f km²\n", areac1); //Usei %.2f para formatação com duas casas decimais
     printf("PIB: %.2f bilhões de reais\n", pibc1); //Usei %.2f para formatação com duas casas decimais
     printf("Número de Pontos Turísticos: %d\n", pontosturc1);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidadepopc1); // dados dos cálculos do Nível 2
+    printf("PIB per Capita: %.2f reais\n", pibpercapitac1); // dados dos cálculos do Nível 2
 
     printf("#####################################\n");
+    
 //exibindo os dados da Carta 2 (c2)
     printf("\nCarta 2:\n");
     printf("Estado: %c\n", estadoc2);
@@ -106,6 +124,8 @@ int main() {
     printf("Área: %.2f km²\n", areac2); //Usei %.2f para formatação com duas casas decimais
     printf("PIB: %.2f bilhões de reais\n", pibc2); //Usei %.2f para formatação com duas casas decimais
     printf("Número de Pontos Turísticos: %d\n", pontosturc2);
+    printf("Densidade Populacional: %.2f hab/km²\n", densidadepopc2); // dados dos cálculos do Nível 2
+    printf("PIB per Capita: %.2f reais\n", pibpercapitac2); // dados dos cálculos do Nível 2
 
     return 0;
 }
